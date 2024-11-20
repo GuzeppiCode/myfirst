@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laikos - Upwards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Upwards slider specific container and animation */
+        #upwards-container {
+            height: 199vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #upwards-gallery {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            animation: scroll-up-unique 20s linear infinite;
+        }
+
+        #upwards-gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Unique keyframe for upwards scrolling */
+        @keyframes scroll-up-unique {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #upwards-gallery img {
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="upwards-container">
+        <div id="upwards-gallery">
+            <a href="https://laikos.org"><img src="box1_fr.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box2_al.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box3_ft.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box4_eg.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box5_ls.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box6_ld.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box1_fr.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box2_al.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box3_ft.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box4_eg.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box5_ls.jpg" alt="xxx" width="233" height="400"></a>
+            <a href="https://laikos.org"><img src="box6_ld.jpg" alt="xxx" width="233" height="400"></a>
+        </div>
+    </div>
+</body>
+</html>

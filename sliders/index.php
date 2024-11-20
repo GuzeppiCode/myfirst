@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Laikos</title>
+
+
+<base target="_self">
+<!-------------------------------------------------->
+ <!------------------------------------------------->
+<style>
+* {    box-sizing: border-box;    }
+
+	 .Kaxxa_sparixxi_w {   display:block;}
+ 	 .Kaxxa_sparixxi_n { display:none; }
+
+  .KaxxaLeft {
+  	float: left;
+  	width: 25%;
+  	height:100vh;
+  	padding: 10px;
+ 	color:white;
+                z-index: 1; 
+             background-color:#2ecc71 ; 
+	 border:5px solid #82e0aa;
+              overflow-y: auto;
+	overflow: hidden;
+	 height: 100vh;
+	}
+
+  .KaxxaInKaxxa {
+  	float: left;
+  	width: 100%;
+  	height:30px;
+  	padding: 10px;
+ 	background-color:blue ;
+                z-index: 1; 
+	 border:1px solid #82e0aa;
+	color:white;
+
+	}
+
+
+
+  .KaxxaMiddle{
+  	float: left;
+  	width: 20%;
+  	height:100vh;
+  	padding: 10px;
+	color:white;
+	background-color:#2ecc71 ; 
+	border:5px solid #82e0aa;
+              overflow-y: auto;
+	overflow: hidden;
+	 height: 100vh;
+	}
+
+
+  .KaxxaRight {
+  	float: left;
+  	width: 35%;
+  	height:100vh;
+  	padding: 10px;
+	color:white;
+ 	background-color:#2ecc71 ; 
+                z-index: 1; 
+	border:5px solid #82e0aa;
+               overflow-y: auto;
+	 height: 100vh;
+        	}
+.KaxxaDiv {
+ 	 width:  100%;     //1400px;
+ 	height : auto;
+	 margin: 0 auto;
+	}
+
+
+
+
+
+/* Clear floats after the columns */
+.row:after { content: ""; display: table; clear: both; 	}
+
+
+
+
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px)  {
+	  .KaxxaLeft {    width: 100%;  }
+	  .KaxxaMiddle {width:50%;}	
+                .KaxxaRight {    width: 100%;  }
+	  }
+
+</style>
+<script>
+function theFunction() {
+		if (window.innerWidth < 400) {    /* Jekk inqas minn 400px imur fil laikos */
+    		window.location.replace("https://laikos.org/index.php");
+		}
+	}
+</script>
+</head><body      bgcolor="#2ecc71"   topmargin="1" onload="theFunction()">   
+<base target="_self">
+
+
+<div class="KaxxaDiv"  >  
+<div class="row"  >  
+
+<div class="KaxxaLeft"  >  
+<div class="KaxxaInKaxxa"  > 
+SSSSSSSSSS
+</div>
+<?php include 'OnTheRight.html';?>
+
+</div>	
+
+
+<div class="KaxxaMiddle">
+    <?php include 'upwards.html'; ?>
+</div>
+
+<div class="KaxxaMiddle">
+    <?php include 'downwardsx.html'; ?>
+</div>
+
+
+<div class="KaxxaRight"  >  
+<?php include 'OnTheRight.html';?>
+</div>
+
+</div>	

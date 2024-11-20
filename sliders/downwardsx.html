@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laikos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            height: 199vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scrolling-gallery1 {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            animation: scrollDown 20s linear infinite;
+        }
+
+        .scrolling-gallery1 img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Animation to scroll images downwards */
+        @keyframes scrollDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Make it responsive */
+        @media (max-width: 768px) {
+            .scrolling-gallery img {
+                object-fit: contain;
+            }
+        }
+
+        img {
+            border-radius: 10%;
+        }
+
+        /* Style for arrow buttons */
+        .arrow {
+         //   position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 2rem;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .arrow-top {
+            top: 10px;
+             position: absolute;
+
+        }
+
+.arrow-bottom {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="arrow arrow-top" onclick="increaseSpeed()">▲</button>
+        <div class="scrolling-gallery1" id="scrollGallery">
+            <a href="https://laikos.org"><img src="box4_eg.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box5_ls.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box6_ld.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box1_fr.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box2_al.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box3_ft.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box4_eg.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box5_ls.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box6_ld.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box1_fr.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box2_al.jpg" alt="xxx"></a><br>
+            <a href="https://laikos.org"><img src="box3_ft.jpg" alt="xxx"></a><br>
+        </div>
+        <button class="arrow arrow-bottom" onclick="decreaseSpeed()">▼</button>
+    </div>
+
+    <script>
+        let scrollGallery = document.getElementById('scrollGallery');
+        let currentDuration = 20; // Default duration for scrolling
+
+        function updateAnimationSpeed() {
+            scrollGallery.style.animation = `scrollDown ${currentDuration}s linear infinite`;
+        }
+
+        function increaseSpeed() {
+            currentDuration = Math.max(5, currentDuration - 5); // Decrease the time to make it faster
+            updateAnimationSpeed();
+        }
+
+        function decreaseSpeed() {
+            currentDuration += 5; // Increase the time to make it slower
+            updateAnimationSpeed();
+        }
+
+        // Apply initial animation speed
+        updateAnimationSpeed();
+    </script>
+</body>
+</html>
