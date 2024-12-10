@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Overlay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+     // background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+          background: #778899B3; /* Semi-transparent white */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .overlay-content {
+
+   background-image: url("5.jpg");
+   background-size: contain;
+
+    //  background: red; // #fff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 736px; /* Fixed size for the nativity image */
+    }
+
+    .overlay-content  {
+      color: #d32f2f; /* Festive red */
+      font-size: 4.5em;
+      margin-bottom: 20px;
+             font-family:'times new roman';
+    }
+
+    .nativity-image {
+border-radius: 40px;
+      width: 300px;
+      height: 300px;
+      background-image: url('nativity.jpg'); /* Replace with the path to your image */
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto;
+
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #007BFF;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay-content" >  
+ Il-Milied it-Tajjeb
+<div>
+
+    <div class="nativity-image"></div>
+
+
+
+</div>
+    <button id="closeOverlay">Laikos</button>
+  </div>
+
+  <script>
+    // Handle closing the overlay
+    document.getElementById('closeOverlay').addEventListener('click', () => {
+      // This assumes the overlay is loaded as an iframe in the parent page
+      window.parent.document.getElementById('overlayIframe').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
